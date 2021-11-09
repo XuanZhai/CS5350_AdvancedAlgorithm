@@ -20,9 +20,11 @@ class DLList {
         ~DLList();
 
         void PushBack(const std::string&);
+        void PushBackP(DLLNode*);
         void PopBack();
         bool isEmpty();
         void PushFront(const std::string&);
+        void PushFrontP(DLLNode*);
         void PopFront();
 
         void PrintList();

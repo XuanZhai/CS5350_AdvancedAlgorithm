@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+iostream
+-
+DLList.h
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+
 /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
 string
 -
@@ -16,9 +22,21 @@ DLLNode.h
 iostream
 -
 
-/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/main.cpp
-iostream
--
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
 DLList.h
 /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.cpp
+SLVO.h
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h
+
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h
+fstream
+-
+unordered_map
+-
+DSStack.h
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
+AdjNode.h
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
 

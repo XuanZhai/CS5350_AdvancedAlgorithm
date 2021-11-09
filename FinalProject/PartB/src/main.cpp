@@ -1,15 +1,15 @@
 #include <iostream>
-#include "DLList.h"
+#include "SLVO.h"
+
+
+
 
 int main() {
-    DLList test;
-    test.PushBack("OPOP");
-    test.PushBack("OPOP");
-    test.PushBack("OPOP");
-    test.PushBack("OPOP");
-    test.PopBack();
-    test.PopBack();
-    test.PopBack();
-    test.PrintList();
+
+
+
+    SLVO newSLVO;
+    newSLVO.ReadFile("input.txt");
+
     return 0;
 }

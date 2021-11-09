@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/src.dir/main.cpp.o CMakeFiles/src.dir/DLLNode.cpp.o CMakeFiles/src.dir/DLList.cpp.o CMakeFiles/src.dir/DSStack.cpp.o CMakeFiles/src.dir/AdjList.cpp.o CMakeFiles/src.dir/AdjNode.cpp.o  -o src 
+/usr/bin/c++ -g CMakeFiles/src.dir/main.cpp.o CMakeFiles/src.dir/DLLNode.cpp.o CMakeFiles/src.dir/DLList.cpp.o CMakeFiles/src.dir/DSStack.cpp.o CMakeFiles/src.dir/AdjNode.cpp.o CMakeFiles/src.dir/SLVO.cpp.o -o src 

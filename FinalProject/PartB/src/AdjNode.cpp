@@ -3,3 +3,13 @@
 //
 
 #include "AdjNode.h"
+
+
+AdjNode::AdjNode(){
+    degree = 0;
+    currentdegree = 0;
+    degreewhendelete = 0;
+    isdeleted = false;
+
+    nodeonlist = nullptr;
+}

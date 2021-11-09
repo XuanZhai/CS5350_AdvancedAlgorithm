@@ -4,9 +4,24 @@
 
 #ifndef SRC_ADJNODE_H
 #define SRC_ADJNODE_H
+#include <iostream>
+#include "DLList.h"
 
 
 class AdjNode {
+    private:
+
+    public:
+        std::string name;
+        int degree;
+        int currentdegree;
+        int degreewhendelete;
+        bool isdeleted;
+
+        DLLNode* nodeonlist;
+        DLList children;
+
+        AdjNode();
 
 };
 

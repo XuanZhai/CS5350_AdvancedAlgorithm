@@ -64,6 +64,22 @@ void DLList::PushBack(const std::string& newstring){
 }
 
 
+void DLList::PushBackP(DLLNode* newnode){
+    if(head == nullptr){
+        head = newnode;
+        tail = newnode;
+        iter = newnode;
+    }
+    else{
+        tail->next = newnode;
+        newnode->prev = tail;
+        tail = newnode;
+
+    }
+    size++;
+}
+
+
 void DLList::PopBack(){
     if(tail == nullptr)
         return;
@@ -91,6 +107,20 @@ bool DLList::isEmpty(){
 
 void DLList::PushFront(const std::string& newstring){
     DLLNode* newnode = new DLLNode(newstring);
+    if(head == nullptr){
+        head = newnode;
+        tail = newnode;
+        iter = newnode;
+    }
+    else{
+        head->prev = newnode;
+        newnode = head;
+    }
+    size++;
+}
+
+
+void DLList::PushFrontP(DLLNode *newnode) {
     if(head == nullptr){
         head = newnode;
         tail = newnode;
