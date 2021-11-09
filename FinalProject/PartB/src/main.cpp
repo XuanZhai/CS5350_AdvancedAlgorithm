@@ -1,6 +1,15 @@
 #include <iostream>
+#include "DLList.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    DLList test;
+    test.PushBack("OPOP");
+    test.PushBack("OPOP");
+    test.PushBack("OPOP");
+    test.PushBack("OPOP");
+    test.PopBack();
+    test.PopBack();
+    test.PopBack();
+    test.PrintList();
     return 0;
 }

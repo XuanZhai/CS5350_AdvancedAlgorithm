@@ -6,25 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.cpp
-DLLNode.h
-/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
-
 /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
 string
 -
-DLList.h
-/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
-
-/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.cpp
-DLList.h
-/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
 
 /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
 DLLNode.h
 /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+iostream
+-
 
 /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/main.cpp
 iostream
 -
+DLList.h
+/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
 

@@ -4,6 +4,8 @@
 
 #include "DLList.h"
 
+using namespace std;
+
 DLList::DLList(){
     head = nullptr;
     tail = nullptr;
@@ -45,26 +47,101 @@ DLList::~DLList(){
 }
 
 
-void DLList::PushBack(const std::string&){
+void DLList::PushBack(const std::string& newstring){
+    DLLNode* newnode = new DLLNode(newstring);
+    if(head == nullptr){
+        head = newnode;
+        tail = newnode;
+        iter = newnode;
+    }
+    else{
+        tail->next = newnode;
+        newnode->prev = tail;
+        tail = newnode;
 
+    }
+    size++;
 }
 
 
 void DLList::PopBack(){
-
+    if(tail == nullptr)
+        return;
+    else if(tail == head){
+        delete head;
+        tail = nullptr;
+        head = nullptr;
+        iter = nullptr;
+    }
+    else{
+        tail = tail->prev;
+        delete tail->next;
+        tail->next = nullptr;
+    }
+    size--;
 }
 
 
-DLLNode* DLList::GetHead(){
+bool DLList::isEmpty(){
+    if(size == 0)
+        return true;
+    return false;
+}
 
+
+void DLList::PushFront(const std::string& newstring){
+    DLLNode* newnode = new DLLNode(newstring);
+    if(head == nullptr){
+        head = newnode;
+        tail = newnode;
+        iter = newnode;
+    }
+    else{
+        head->prev = newnode;
+        newnode = head;
+    }
+    size++;
+}
+
+
+void DLList::PopFront(){
+    if(head == nullptr){
+        return;
+    }
+    else if(head == tail){
+        delete head;
+        head = nullptr;
+        tail = nullptr;
+        iter = nullptr;
+    }
+    else{
+        head = head->next;
+        delete head->prev;
+        head->prev = nullptr;
+    }
+    size--;
+}
+
+DLLNode* DLList::GetHead(){
+    return head;
 }
 
 
 DLLNode* DLList::GetTail(){
-
+    return tail;
 }
 
 
 DLLNode* DLList::GetIter(){
+    return iter;
+}
 
+
+void DLList::PrintList() {
+    DLLNode* temp = head;
+    while (temp != nullptr){
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
 }

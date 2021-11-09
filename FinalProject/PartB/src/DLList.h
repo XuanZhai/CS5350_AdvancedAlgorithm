@@ -5,6 +5,7 @@
 #ifndef SRC_DLLIST_H
 #define SRC_DLLIST_H
 #include "DLLNode.h"
+#include <iostream>
 
 class DLList {
     private:
@@ -20,8 +21,11 @@ class DLList {
 
         void PushBack(const std::string&);
         void PopBack();
+        bool isEmpty();
+        void PushFront(const std::string&);
+        void PopFront();
 
-
+        void PrintList();
 
         DLLNode* GetHead();
         DLLNode* GetTail();
