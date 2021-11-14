@@ -30,7 +30,7 @@ def add_edge(node1, node2, weight):
 
 
 def CompleteGraph(v):
-    InitList()
+    InitList(v)
     for i in range(v):
         for j in range(i,v):
             if(i != j):
@@ -213,6 +213,26 @@ def PrintOutput(isToaFile, filename):              # isToaFile = 0 means print t
     if isToaFile:
         file.close()
 
-LoadInput()
-ProcessInput()
-PrintOutput(True,"output.txt")
+
+
+def GenerateOutput():
+    size = 10000
+    CompleteGraph(size)
+    PrintOutput(True,"10000/Complete.txt")
+    CycleGraph(size)
+    PrintOutput(True,"10000/Cycle.txt")
+    for i in range(3):
+        RandomGraph(size,size)
+        filename = "10000/Random_" + str(i) + ".txt"
+        PrintOutput(True,filename)
+
+        RandomGraphS(size,size)
+        filename = "10000/RandomS_" + str(i) + ".txt"
+        PrintOutput(True,filename)
+        
+        RandomGraphG(size,size)
+        filename = "10000/Randomg_" + str(i) + ".txt"
+        PrintOutput(True,filename)
+
+
+GenerateOutput()

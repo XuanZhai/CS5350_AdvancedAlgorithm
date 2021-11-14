@@ -10,8 +10,24 @@ DLLNode::DLLNode(){
     next = nullptr;
 }
 
-DLLNode::DLLNode(const std::string& newData){
+DLLNode::DLLNode(const int& newData){
     data = newData;
+    prev = nullptr;
+    next = nullptr;
+}
+
+
+void DLLNode::SelfDelete(){
+    if(prev != nullptr && next != nullptr) {
+        prev->next = next;
+        next->prev = prev;
+    }
+    else if(next != nullptr){
+        next->prev = nullptr;
+    }
+    else if(prev != nullptr){
+        prev->next = nullptr;
+    }
     prev = nullptr;
     next = nullptr;
 }

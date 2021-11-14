@@ -25,6 +25,13 @@ CMakeFiles/src.dir/SLVO.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.cpp
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h
+CMakeFiles/src.dir/URO.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.h
 CMakeFiles/src.dir/main.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h

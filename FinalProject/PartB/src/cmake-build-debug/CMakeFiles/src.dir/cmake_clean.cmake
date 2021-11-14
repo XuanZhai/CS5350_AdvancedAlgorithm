@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/DLList.cpp.o"
   "CMakeFiles/src.dir/DSStack.cpp.o"
   "CMakeFiles/src.dir/SLVO.cpp.o"
+  "CMakeFiles/src.dir/URO.cpp.o"
   "CMakeFiles/src.dir/main.cpp.o"
   "src"
   "src.pdb"

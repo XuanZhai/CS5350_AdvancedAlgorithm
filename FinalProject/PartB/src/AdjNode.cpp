@@ -6,9 +6,11 @@
 
 
 AdjNode::AdjNode(){
+    data = -1;
     degree = 0;
     currentdegree = 0;
     degreewhendelete = 0;
+    color = 0;
     isdeleted = false;
 
     nodeonlist = nullptr;

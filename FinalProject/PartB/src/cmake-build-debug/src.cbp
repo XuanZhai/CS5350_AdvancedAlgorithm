@@ -112,6 +112,12 @@
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/main.cpp">
 			<Option target="src"/>
 		</Unit>

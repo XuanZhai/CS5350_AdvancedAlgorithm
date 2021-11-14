@@ -12,8 +12,9 @@ class AdjNode {
     private:
 
     public:
-        std::string name;
+        int data;
         int degree;
+        int color;
         int currentdegree;
         int degreewhendelete;
         bool isdeleted;

@@ -6,16 +6,18 @@
 #define SRC_SLVO_H
 
 #include <fstream>
-#include <unordered_map>
 #include "DSStack.h"
 #include "AdjNode.h"
 
 class SLVO {
     private:
-        std::unordered_map<std::string, AdjNode> AdjMap;
+        AdjNode* AdjMap;
         DSStack ColorOrder;
         DLList* DegreeTracker;
         int maxdegree;
+        int maxdeletedegree;
+        int cumOriginalDegree;
+        int nColorUsed;
         int itemsonTracker;
     public:
         SLVO();
@@ -23,6 +25,8 @@ class SLVO {
         SLVO& operator=(const SLVO&);
         void AddEdge(const int&,const int&);
         void ReadFile(const std::string&);
+        void Coloring();
+        void PrintResult();
         ~SLVO();
 };
 

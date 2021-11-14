@@ -12,10 +12,11 @@ class DLLNode {
     public:
         DLLNode* next;
         DLLNode* prev;
-        std::string data;
+        int data;
 
         DLLNode();
-        DLLNode(const std::string&);
+        explicit DLLNode(const int&);
+        void SelfDelete();
 };
 
 

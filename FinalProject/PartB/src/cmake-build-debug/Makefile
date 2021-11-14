@@ -249,6 +249,30 @@ SLVO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/SLVO.cpp.s
 .PHONY : SLVO.cpp.s
 
+URO.o: URO.cpp.o
+.PHONY : URO.o
+
+# target to build an object file
+URO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/URO.cpp.o
+.PHONY : URO.cpp.o
+
+URO.i: URO.cpp.i
+.PHONY : URO.i
+
+# target to preprocess a source file
+URO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/URO.cpp.i
+.PHONY : URO.cpp.i
+
+URO.s: URO.cpp.s
+.PHONY : URO.s
+
+# target to generate assembly for a file
+URO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/URO.cpp.s
+.PHONY : URO.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -297,6 +321,9 @@ help:
 	@echo "... SLVO.o"
 	@echo "... SLVO.i"
 	@echo "... SLVO.s"
+	@echo "... URO.o"
+	@echo "... URO.i"
+	@echo "... URO.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

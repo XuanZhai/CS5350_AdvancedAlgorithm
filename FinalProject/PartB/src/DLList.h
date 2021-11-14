@@ -9,29 +9,31 @@
 
 class DLList {
     private:
+        int size;
+    public:
         DLLNode* head;
         DLLNode* tail;
         DLLNode* iter;
-        int size;
-    public:
         DLList();
         DLList(const DLList&);
         DLList& operator=(const DLList&);
         ~DLList();
 
-        void PushBack(const std::string&);
+        void PushBack(const int&);
         void PushBackP(DLLNode*);
         void PopBack();
         bool isEmpty();
-        void PushFront(const std::string&);
+        void PushFront(const int&);
         void PushFrontP(DLLNode*);
         void PopFront();
-
         void PrintList();
 
         DLLNode* GetHead();
         DLLNode* GetTail();
         DLLNode* GetIter();
+        int GetSize();
+        void DecreSize();
+        void DeleteNode(DLLNode*&);
 };
 
 

@@ -4,8 +4,9 @@
 
 #include "DSStack.h"
 
-void DSStack::Pushback(std::string newstring){
+void DSStack::Pushback(const int& newstring){
     linkedlist.PushBack(newstring);
+    int b = 0;
 }
 
 
@@ -14,7 +15,7 @@ void DSStack::Popback(){
 }
 
 
-std::string DSStack::Peek(){
+int DSStack::Peek(){
     return linkedlist.GetTail()->data;
 }
 

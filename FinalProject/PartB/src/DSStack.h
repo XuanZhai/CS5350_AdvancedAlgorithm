@@ -10,9 +10,9 @@ class DSStack {
     private:
         DLList linkedlist;
     public:
-        void Pushback(std::string);
+        void Pushback(const int&);
         void Popback();
-        std::string Peek();
+        int Peek();
         bool isEmpty();
 };
 

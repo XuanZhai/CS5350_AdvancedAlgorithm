@@ -9,7 +9,9 @@ int main() {
 
 
     SLVO newSLVO;
-    newSLVO.ReadFile("input.txt");
+    newSLVO.ReadFile("Complete.txt");
+    newSLVO.Coloring();
+    newSLVO.PrintResult();
 
     return 0;
 }

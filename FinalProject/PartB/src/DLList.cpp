@@ -22,7 +22,6 @@ DLList::DLList(const DLList& newList){
         temp = temp->next;
     }
     iter = head;
-    size = newList.size;
 }
 
 
@@ -35,7 +34,6 @@ DLList& DLList::operator=(const DLList& newList){
         temp = temp->next;
     }
     iter = head;
-    size = newList.size;
     return *this;
 }
 
@@ -47,8 +45,8 @@ DLList::~DLList(){
 }
 
 
-void DLList::PushBack(const std::string& newstring){
-    DLLNode* newnode = new DLLNode(newstring);
+void DLList::PushBack(const int& newint){
+    DLLNode* newnode = new DLLNode(newint);
     if(head == nullptr){
         head = newnode;
         tail = newnode;
@@ -73,6 +71,7 @@ void DLList::PushBackP(DLLNode* newnode){
     else{
         tail->next = newnode;
         newnode->prev = tail;
+        newnode->next = nullptr;
         tail = newnode;
 
     }
@@ -105,8 +104,8 @@ bool DLList::isEmpty(){
 }
 
 
-void DLList::PushFront(const std::string& newstring){
-    DLLNode* newnode = new DLLNode(newstring);
+void DLList::PushFront(const int& newint){
+    DLLNode* newnode = new DLLNode(newint);
     if(head == nullptr){
         head = newnode;
         tail = newnode;
@@ -174,4 +173,34 @@ void DLList::PrintList() {
         temp = temp->next;
     }
     cout << endl;
+}
+
+
+
+int DLList::GetSize(){
+    return size;
+}
+
+
+void DLList::DecreSize() {
+    size--;
+}
+
+
+void DLList::DeleteNode(DLLNode*& oldnode){
+    if(oldnode->prev != nullptr && oldnode->next != nullptr) {
+        oldnode->prev->next = oldnode->next;
+        oldnode->next->prev = oldnode->prev;
+    }
+    else if(oldnode->next != nullptr){              // Means it's the head
+        head = oldnode->next;
+        oldnode->next->prev = nullptr;
+    }
+    else if(oldnode->prev != nullptr){                       // Means it's the tail
+        tail = oldnode->prev;
+        oldnode->prev->next = nullptr;
+    }
+    oldnode->prev = nullptr;
+    oldnode->next = nullptr;
+    size--;
 }

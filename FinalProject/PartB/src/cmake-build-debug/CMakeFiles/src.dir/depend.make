@@ -25,6 +25,13 @@ CMakeFiles/src.dir/SLVO.cpp.o: \
  ../DSStack.h \
  ../SLVO.cpp \
  ../SLVO.h
+CMakeFiles/src.dir/URO.cpp.o: \
+ ../AdjNode.h \
+ ../DLLNode.h \
+ ../DLList.h \
+ ../DSStack.h \
+ ../URO.cpp \
+ ../URO.h
 CMakeFiles/src.dir/main.cpp.o: \
  ../AdjNode.h \
  ../DLLNode.h \
