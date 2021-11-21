@@ -1,13 +1,14 @@
 //
-// Created by Xuan Zhai on 2021/11/13.
+// Created by Xuan Zhai on 2021/11/19.
 //
 
-#include "URO.h"
+#include "BFSO.h"
+
 
 using namespace std;
 
 
-URO::URO(){
+BFSO::BFSO(){
     AdjMap = nullptr;
     nvertices = 0;
     nColorUsed = 1;
@@ -15,7 +16,7 @@ URO::URO(){
 }
 
 
-URO::URO(const URO& newalgo){
+BFSO::BFSO(const BFSO& newalgo){
     nvertices = newalgo.nvertices;
     AdjMap = new AdjNode[nvertices];
     for(int i = 0; i < nvertices; i++){
@@ -27,12 +28,12 @@ URO::URO(const URO& newalgo){
 }
 
 
-URO::~URO(){
+BFSO::~BFSO(){
     delete[] Verticesleft;
 }
 
 
-URO& URO::operator=(const URO& newalgo){
+BFSO& BFSO::operator=(const BFSO& newalgo){
     AdjMap = new AdjNode[nvertices];
     nvertices = newalgo.nvertices;
     for(int i = 0; i < nvertices; i++){
@@ -47,7 +48,7 @@ URO& URO::operator=(const URO& newalgo){
 
 
 // Time Complexity Theta(V+E)
-void URO::ReadFile(const std::string& newfilename) {
+void BFSO::ReadFile(const std::string& newfilename) {
     filename = newfilename;
     ifstream inputfile(filename);                       // Open a file
     if(!inputfile){
@@ -102,9 +103,13 @@ void URO::ReadFile(const std::string& newfilename) {
 }
 
 
-// Time complexity O(V+E)
-void URO::Coloring(const bool& isPrint){
-    int nverremain = nvertices;             // How many vertices are not colored
+// Time Complexity is V+E
+void BFSO::Coloring(const bool& isPrint){
+    bool *visited = new bool[nvertices]{false};
+    DSQueue BFSQueue;
+    int loopindex = 0;
+
+    int nverremain = nvertices;
     int totaloriginaldegree = 0;
     int selectedsize = 0;
     ofstream outputfile;
@@ -112,20 +117,40 @@ void URO::Coloring(const bool& isPrint){
         outputfile.open("out_"+filename);
     }
 
+    BFSQueue.Pushback(0);
+    visited[0] = true;
 
-    while (nverremain != 0){                // While not all been selected
-        int selindex = rand()%nverremain;       // Randomly pick one that's unselected
-        int selected = Verticesleft[selindex];
-        Verticesleft[selindex] = Verticesleft[nverremain-1];  // Delete it in the array
-        int newcolor = ColoraVertex(selected);          // Find a color for it
-        AdjMap[selected].color = newcolor;
-        if(isPrint) {
-            totaloriginaldegree += AdjMap[selected].degree;
-            selectedsize++;
-            cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
-            outputfile << selected << ", " << newcolor << endl;
+    while (nverremain != 0){
+        if(BFSQueue.isEmpty()){
+            loopindex++;
+            if(!visited[loopindex]){
+                BFSQueue.Pushback(loopindex);
+            }
         }
-        nverremain--;
+
+        while(!BFSQueue.isEmpty()){             // BFS search that will loop through the graph.
+            int selected = BFSQueue.Peek();
+            BFSQueue.PopFront();
+            int newcolor = ColoraVertex(selected);
+            AdjMap[selected].color = newcolor;
+            if(isPrint) {
+                totaloriginaldegree += AdjMap[selected].degree;
+                selectedsize++;
+                cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
+                outputfile << selected << ", " << newcolor << endl;
+            }
+            nverremain--;
+
+            DLLNode* temp = AdjMap[selected].children.head;
+            while (temp != nullptr){
+                if(!visited[temp->data]){
+                    visited[temp->data] = true;
+                    BFSQueue.Pushback(temp->data);
+                }
+                temp = temp->next;
+            }
+
+        }
     }
 
     outputfile.close();
@@ -133,4 +158,5 @@ void URO::Coloring(const bool& isPrint){
     cout << "Total number of colors used: " << nColorUsed+1 << endl;
     cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
     cout << "=====================================" << endl;
+    delete[] visited;
 }

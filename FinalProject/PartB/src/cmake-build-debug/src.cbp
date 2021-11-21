@@ -88,6 +88,24 @@
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.cpp">
 			<Option target="src"/>
 		</Unit>
@@ -100,16 +118,34 @@
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.cpp">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.cpp">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.h">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.cpp">

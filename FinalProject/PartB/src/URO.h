@@ -4,27 +4,23 @@
 
 #ifndef SRC_URO_H
 #define SRC_URO_H
-#include <string>
-#include <fstream>
+#include "AlgoInterface.h"
 #include <cstdlib>
 #include <ctime>
 #include <cstdio>
-#include "DSStack.h"
-#include "AdjNode.h"
 
-class URO {
+
+class URO : public AlgoInterface {
     private:
-        AdjNode* AdjMap;
-        DSStack ColorOrder;
-        int nvertices;
+        int* Verticesleft;                  // A integer array that tracking unselected vertices
+
     public:
         URO();
         URO(const URO&);
         ~URO();
         URO& operator=(const URO&);
-        void ReadFile(const std::string&);
-        void AddEdge(const int&,const int&);
-        void Coloring();
+        void ReadFile(const std::string&) override;
+        void Coloring(const bool&) override;
 };
 
 

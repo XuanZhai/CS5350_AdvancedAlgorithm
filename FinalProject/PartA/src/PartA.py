@@ -216,22 +216,22 @@ def PrintOutput(isToaFile, filename):              # isToaFile = 0 means print t
 
 
 def GenerateOutput():
-    size = 10000
+    size = 1000
     CompleteGraph(size)
-    PrintOutput(True,"10000/Complete.txt")
+    PrintOutput(True, str(size) + "/Complete.txt")
     CycleGraph(size)
-    PrintOutput(True,"10000/Cycle.txt")
+    PrintOutput(True,str(size) + "/Cycle.txt")
     for i in range(3):
-        RandomGraph(size,size)
-        filename = "10000/Random_" + str(i) + ".txt"
+        RandomGraph(size,size*10)
+        filename = str(size) + "/Random_" + str(i) + ".txt"
         PrintOutput(True,filename)
 
-        RandomGraphS(size,size)
-        filename = "10000/RandomS_" + str(i) + ".txt"
+        RandomGraphS(size,size*10)
+        filename = str(size) + "/RandomS_" + str(i) + ".txt"
         PrintOutput(True,filename)
         
-        RandomGraphG(size,size)
-        filename = "10000/Randomg_" + str(i) + ".txt"
+        RandomGraphG(size,size*10)
+        filename = str(size) + "/RandomG_" + str(i) + ".txt"
         PrintOutput(True,filename)
 
 

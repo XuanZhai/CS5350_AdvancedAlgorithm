@@ -5,28 +5,22 @@
 #ifndef SRC_SLVO_H
 #define SRC_SLVO_H
 
-#include <fstream>
+#include "AlgoInterface.h"
 #include "DSStack.h"
-#include "AdjNode.h"
 
-class SLVO {
+class SLVO : public AlgoInterface{
     private:
-        AdjNode* AdjMap;
         DSStack ColorOrder;
         DLList* DegreeTracker;
-        int maxdegree;
-        int maxdeletedegree;
-        int cumOriginalDegree;
-        int nColorUsed;
+        int terminalclique;
         int itemsonTracker;
     public:
         SLVO();
         SLVO(const SLVO&);
         SLVO& operator=(const SLVO&);
-        void AddEdge(const int&,const int&);
-        void ReadFile(const std::string&);
-        void Coloring();
-        void PrintResult();
+        void ReadFile(const std::string&) override;
+        void FindOrder();
+        void Coloring(const bool&) override;
         ~SLVO();
 };
 

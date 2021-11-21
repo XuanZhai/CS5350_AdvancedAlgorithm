@@ -6,7 +6,6 @@
 
 void DSStack::Pushback(const int& newstring){
     linkedlist.PushBack(newstring);
-    int b = 0;
 }
 
 

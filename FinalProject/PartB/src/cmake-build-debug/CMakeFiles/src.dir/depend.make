@@ -6,6 +6,28 @@ CMakeFiles/src.dir/AdjNode.cpp.o: \
  ../AdjNode.h \
  ../DLLNode.h \
  ../DLList.h
+CMakeFiles/src.dir/AlgoInterface.cpp.o: \
+ ../AdjNode.h \
+ ../AlgoInterface.cpp \
+ ../AlgoInterface.h \
+ ../DLLNode.h \
+ ../DLList.h
+CMakeFiles/src.dir/BFSO.cpp.o: \
+ ../AdjNode.h \
+ ../AlgoInterface.h \
+ ../BFSO.cpp \
+ ../BFSO.h \
+ ../DLLNode.h \
+ ../DLList.h \
+ ../DSQueue.h
+CMakeFiles/src.dir/DFSO.cpp.o: \
+ ../AdjNode.h \
+ ../AlgoInterface.h \
+ ../DFSO.cpp \
+ ../DFSO.h \
+ ../DLLNode.h \
+ ../DLList.h \
+ ../DSStack.h
 CMakeFiles/src.dir/DLLNode.cpp.o: \
  ../DLLNode.cpp \
  ../DLLNode.h
@@ -13,29 +35,56 @@ CMakeFiles/src.dir/DLList.cpp.o: \
  ../DLLNode.h \
  ../DLList.cpp \
  ../DLList.h
+CMakeFiles/src.dir/DSQueue.cpp.o: \
+ ../DLLNode.h \
+ ../DLList.h \
+ ../DSQueue.cpp \
+ ../DSQueue.h
 CMakeFiles/src.dir/DSStack.cpp.o: \
  ../DLLNode.h \
  ../DLList.h \
  ../DSStack.cpp \
  ../DSStack.h
+CMakeFiles/src.dir/LOLVO.cpp.o: \
+ ../AdjNode.h \
+ ../AlgoInterface.h \
+ ../DLLNode.h \
+ ../DLList.h \
+ ../LOLVO.cpp \
+ ../LOLVO.h
 CMakeFiles/src.dir/SLVO.cpp.o: \
  ../AdjNode.h \
+ ../AlgoInterface.h \
  ../DLLNode.h \
  ../DLList.h \
  ../DSStack.h \
  ../SLVO.cpp \
  ../SLVO.h
-CMakeFiles/src.dir/URO.cpp.o: \
+CMakeFiles/src.dir/SOLVO.cpp.o: \
  ../AdjNode.h \
+ ../AlgoInterface.h \
  ../DLLNode.h \
  ../DLList.h \
- ../DSStack.h \
+ ../SOLVO.cpp \
+ ../SOLVO.h
+CMakeFiles/src.dir/URO.cpp.o: \
+ ../AdjNode.h \
+ ../AlgoInterface.h \
+ ../DLLNode.h \
+ ../DLList.h \
  ../URO.cpp \
  ../URO.h
 CMakeFiles/src.dir/main.cpp.o: \
  ../AdjNode.h \
+ ../AlgoInterface.h \
+ ../BFSO.h \
+ ../DFSO.h \
  ../DLLNode.h \
  ../DLList.h \
+ ../DSQueue.h \
  ../DSStack.h \
+ ../LOLVO.h \
  ../SLVO.h \
+ ../SOLVO.h \
+ ../URO.h \
  ../main.cpp

@@ -153,6 +153,78 @@ AdjNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/AdjNode.cpp.s
 .PHONY : AdjNode.cpp.s
 
+AlgoInterface.o: AlgoInterface.cpp.o
+.PHONY : AlgoInterface.o
+
+# target to build an object file
+AlgoInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/AlgoInterface.cpp.o
+.PHONY : AlgoInterface.cpp.o
+
+AlgoInterface.i: AlgoInterface.cpp.i
+.PHONY : AlgoInterface.i
+
+# target to preprocess a source file
+AlgoInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/AlgoInterface.cpp.i
+.PHONY : AlgoInterface.cpp.i
+
+AlgoInterface.s: AlgoInterface.cpp.s
+.PHONY : AlgoInterface.s
+
+# target to generate assembly for a file
+AlgoInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/AlgoInterface.cpp.s
+.PHONY : AlgoInterface.cpp.s
+
+BFSO.o: BFSO.cpp.o
+.PHONY : BFSO.o
+
+# target to build an object file
+BFSO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/BFSO.cpp.o
+.PHONY : BFSO.cpp.o
+
+BFSO.i: BFSO.cpp.i
+.PHONY : BFSO.i
+
+# target to preprocess a source file
+BFSO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/BFSO.cpp.i
+.PHONY : BFSO.cpp.i
+
+BFSO.s: BFSO.cpp.s
+.PHONY : BFSO.s
+
+# target to generate assembly for a file
+BFSO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/BFSO.cpp.s
+.PHONY : BFSO.cpp.s
+
+DFSO.o: DFSO.cpp.o
+.PHONY : DFSO.o
+
+# target to build an object file
+DFSO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DFSO.cpp.o
+.PHONY : DFSO.cpp.o
+
+DFSO.i: DFSO.cpp.i
+.PHONY : DFSO.i
+
+# target to preprocess a source file
+DFSO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DFSO.cpp.i
+.PHONY : DFSO.cpp.i
+
+DFSO.s: DFSO.cpp.s
+.PHONY : DFSO.s
+
+# target to generate assembly for a file
+DFSO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DFSO.cpp.s
+.PHONY : DFSO.cpp.s
+
 DLLNode.o: DLLNode.cpp.o
 .PHONY : DLLNode.o
 
@@ -201,6 +273,30 @@ DLList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DLList.cpp.s
 .PHONY : DLList.cpp.s
 
+DSQueue.o: DSQueue.cpp.o
+.PHONY : DSQueue.o
+
+# target to build an object file
+DSQueue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DSQueue.cpp.o
+.PHONY : DSQueue.cpp.o
+
+DSQueue.i: DSQueue.cpp.i
+.PHONY : DSQueue.i
+
+# target to preprocess a source file
+DSQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DSQueue.cpp.i
+.PHONY : DSQueue.cpp.i
+
+DSQueue.s: DSQueue.cpp.s
+.PHONY : DSQueue.s
+
+# target to generate assembly for a file
+DSQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DSQueue.cpp.s
+.PHONY : DSQueue.cpp.s
+
 DSStack.o: DSStack.cpp.o
 .PHONY : DSStack.o
 
@@ -225,6 +321,30 @@ DSStack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/DSStack.cpp.s
 .PHONY : DSStack.cpp.s
 
+LOLVO.o: LOLVO.cpp.o
+.PHONY : LOLVO.o
+
+# target to build an object file
+LOLVO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/LOLVO.cpp.o
+.PHONY : LOLVO.cpp.o
+
+LOLVO.i: LOLVO.cpp.i
+.PHONY : LOLVO.i
+
+# target to preprocess a source file
+LOLVO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/LOLVO.cpp.i
+.PHONY : LOLVO.cpp.i
+
+LOLVO.s: LOLVO.cpp.s
+.PHONY : LOLVO.s
+
+# target to generate assembly for a file
+LOLVO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/LOLVO.cpp.s
+.PHONY : LOLVO.cpp.s
+
 SLVO.o: SLVO.cpp.o
 .PHONY : SLVO.o
 
@@ -248,6 +368,30 @@ SLVO.s: SLVO.cpp.s
 SLVO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/SLVO.cpp.s
 .PHONY : SLVO.cpp.s
+
+SOLVO.o: SOLVO.cpp.o
+.PHONY : SOLVO.o
+
+# target to build an object file
+SOLVO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/SOLVO.cpp.o
+.PHONY : SOLVO.cpp.o
+
+SOLVO.i: SOLVO.cpp.i
+.PHONY : SOLVO.i
+
+# target to preprocess a source file
+SOLVO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/SOLVO.cpp.i
+.PHONY : SOLVO.cpp.i
+
+SOLVO.s: SOLVO.cpp.s
+.PHONY : SOLVO.s
+
+# target to generate assembly for a file
+SOLVO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/SOLVO.cpp.s
+.PHONY : SOLVO.cpp.s
 
 URO.o: URO.cpp.o
 .PHONY : URO.o
@@ -309,18 +453,36 @@ help:
 	@echo "... AdjNode.o"
 	@echo "... AdjNode.i"
 	@echo "... AdjNode.s"
+	@echo "... AlgoInterface.o"
+	@echo "... AlgoInterface.i"
+	@echo "... AlgoInterface.s"
+	@echo "... BFSO.o"
+	@echo "... BFSO.i"
+	@echo "... BFSO.s"
+	@echo "... DFSO.o"
+	@echo "... DFSO.i"
+	@echo "... DFSO.s"
 	@echo "... DLLNode.o"
 	@echo "... DLLNode.i"
 	@echo "... DLLNode.s"
 	@echo "... DLList.o"
 	@echo "... DLList.i"
 	@echo "... DLList.s"
+	@echo "... DSQueue.o"
+	@echo "... DSQueue.i"
+	@echo "... DSQueue.s"
 	@echo "... DSStack.o"
 	@echo "... DSStack.i"
 	@echo "... DSStack.s"
+	@echo "... LOLVO.o"
+	@echo "... LOLVO.i"
+	@echo "... LOLVO.s"
 	@echo "... SLVO.o"
 	@echo "... SLVO.i"
 	@echo "... SLVO.s"
+	@echo "... SOLVO.o"
+	@echo "... SOLVO.i"
+	@echo "... SOLVO.s"
 	@echo "... URO.o"
 	@echo "... URO.i"
 	@echo "... URO.s"

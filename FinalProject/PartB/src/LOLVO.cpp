@@ -1,53 +1,60 @@
 //
-// Created by Xuan Zhai on 2021/11/13.
+// Created by Xuan Zhai on 2021/11/20.
 //
 
-#include "URO.h"
+#include "LOLVO.h"
 
 using namespace std;
 
-
-URO::URO(){
+LOLVO::LOLVO(){
     AdjMap = nullptr;
+    DegreeTracker = nullptr;
     nvertices = 0;
     nColorUsed = 1;
-    Verticesleft = nullptr;
 }
 
 
-URO::URO(const URO& newalgo){
-    nvertices = newalgo.nvertices;
+LOLVO::LOLVO(const LOLVO& newalgo){
     AdjMap = new AdjNode[nvertices];
     for(int i = 0; i < nvertices; i++){
         AdjMap[i] = newalgo.AdjMap[i];
     }
+
+
+    DegreeTracker = new DLList[newalgo.nvertices];
+    for(int i = 0; i < nvertices-1; i++){
+        DegreeTracker[i] = newalgo.DegreeTracker[i];
+    }
+    nvertices = newalgo.nvertices;
     nColorUsed = newalgo.nColorUsed;
-    Verticesleft = newalgo.Verticesleft;
     filename = newalgo.filename;
 }
 
 
-URO::~URO(){
-    delete[] Verticesleft;
-}
-
-
-URO& URO::operator=(const URO& newalgo){
+LOLVO& LOLVO::operator=(const LOLVO& newalgo){
     AdjMap = new AdjNode[nvertices];
-    nvertices = newalgo.nvertices;
     for(int i = 0; i < nvertices; i++){
         AdjMap[i] = newalgo.AdjMap[i];
     }
+    delete[] DegreeTracker;
+    DegreeTracker = new DLList[newalgo.nvertices];
+    for(int i = 0; i < nvertices-1; i++){
+        DegreeTracker[i] = newalgo.DegreeTracker[i];
+    }
+    nvertices = newalgo.nvertices;
     nColorUsed = newalgo.nColorUsed;
-    Verticesleft = newalgo.Verticesleft;
     filename = newalgo.filename;
     return *this;
 }
 
 
+LOLVO::~LOLVO(){
+    delete[] DegreeTracker;
+}
+
 
 // Time Complexity Theta(V+E)
-void URO::ReadFile(const std::string& newfilename) {
+void LOLVO::ReadFile(const std::string& newfilename) {
     filename = newfilename;
     ifstream inputfile(filename);                       // Open a file
     if(!inputfile){
@@ -56,9 +63,8 @@ void URO::ReadFile(const std::string& newfilename) {
     }
 
     inputfile >> nvertices;                 // Read the number of vertices
-
+    DegreeTracker = new DLList[nvertices];     // Create an array for tracking the degree
     AdjMap = new AdjNode[nvertices];        // Create a dictionary of adjacent nodes
-    Verticesleft = new int[nvertices];
 
     int* indexdict[2];
 
@@ -77,7 +83,6 @@ void URO::ReadFile(const std::string& newfilename) {
         AdjNode newNode;
         newNode.data = i;       // Add a degree to the dictionary
         AdjMap[i] = newNode;
-        Verticesleft[i] = i;
     }
     indexdict[1][nvertices-1] = -1;       // # We don't know the number of degree for the last vertex, so set to -1
 
@@ -94,7 +99,9 @@ void URO::ReadFile(const std::string& newfilename) {
     }
 
     for(int i = 0; i < nvertices; i++){
-        AdjMap[i].nodeonlist = nullptr;         // make adjNode's pointer points to it
+        DLLNode* newnode = new DLLNode(i);      // Create a node for it
+        AdjMap[i].nodeonlist = newnode;         // make adjNode's pointer points to it
+        DegreeTracker[AdjMap[i].degree].PushBackP(newnode);        // Add that node to the tracker.
     }
 
     delete[] indexdict[0];          // Delete the start index for each node
@@ -102,35 +109,41 @@ void URO::ReadFile(const std::string& newfilename) {
 }
 
 
-// Time complexity O(V+E)
-void URO::Coloring(const bool& isPrint){
-    int nverremain = nvertices;             // How many vertices are not colored
-    int totaloriginaldegree = 0;
-    int selectedsize = 0;
+void LOLVO::Coloring(const bool& isPrint){      // Same algorithm as what in SOLVO, only loop through the table
+    int totaloriginaldegree = 0;                // From top to bottom instead of from bottom to top
+    int stacksize = 0;
+    int trackerlevel = nvertices-1;             // Here it starts at the maxdegree and goes to.
     ofstream outputfile;
     if(isPrint){
         outputfile.open("out_"+filename);
     }
 
-
-    while (nverremain != 0){                // While not all been selected
-        int selindex = rand()%nverremain;       // Randomly pick one that's unselected
-        int selected = Verticesleft[selindex];
-        Verticesleft[selindex] = Verticesleft[nverremain-1];  // Delete it in the array
-        int newcolor = ColoraVertex(selected);          // Find a color for it
-        AdjMap[selected].color = newcolor;
-        if(isPrint) {
-            totaloriginaldegree += AdjMap[selected].degree;
-            selectedsize++;
-            cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
-            outputfile << selected << ", " << newcolor << endl;
+    while (stacksize != nvertices){
+        if(DegreeTracker[trackerlevel].isEmpty()){
+            trackerlevel--;
         }
-        nverremain--;
+        else{
+            DLLNode* temp = DegreeTracker[trackerlevel].GetHead();
+            while (temp != nullptr){
+                int selected = temp->data;
+                int newcolor = ColoraVertex(selected);
+                AdjMap[selected].color = newcolor;
+                if(isPrint) {
+                    totaloriginaldegree += AdjMap[selected].degree;
+                    cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
+                    outputfile << temp << ", " << newcolor << endl;
+                }
+                stacksize++;
+                temp = temp->next;
+            }
+            trackerlevel--;
+        }
     }
+
 
     outputfile.close();
     cout << "\n=====================================" << endl;
     cout << "Total number of colors used: " << nColorUsed+1 << endl;
-    cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
+    cout << "The average Original degree: " << totaloriginaldegree / stacksize << endl;
     cout << "=====================================" << endl;
 }

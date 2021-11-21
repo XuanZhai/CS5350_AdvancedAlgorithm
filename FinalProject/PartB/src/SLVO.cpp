@@ -9,64 +9,69 @@ using namespace std;
 SLVO::SLVO(){
     AdjMap = nullptr;
     DegreeTracker = nullptr;
-    maxdegree = 0;
+    nvertices = 0;
     itemsonTracker = 0;
-    maxdeletedegree = 0;
-    cumOriginalDegree = 0;
-    nColorUsed = 0;
+    terminalclique = 0;
+    nColorUsed = 1;
 }
 
 
 SLVO::SLVO(const SLVO& newalgo){
-    AdjMap = new AdjNode[maxdegree+1];
-    for(int i = 0; i < maxdegree+1; i++){
+    AdjMap = new AdjNode[nvertices];
+    for(int i = 0; i < nvertices; i++){
         AdjMap[i] = newalgo.AdjMap[i];
     }
 
 
     ColorOrder = newalgo.ColorOrder;
-    DegreeTracker = new DLList[newalgo.maxdegree+1];
-    for(int i = 0; i < maxdegree; i++){
+    DegreeTracker = new DLList[newalgo.nvertices];
+    for(int i = 0; i < nvertices-1; i++){
         DegreeTracker[i] = newalgo.DegreeTracker[i];
     }
-    maxdegree = newalgo.maxdegree;
+    nvertices = newalgo.nvertices;
+    terminalclique = newalgo.terminalclique;
+    nColorUsed = newalgo.nColorUsed;
+    itemsonTracker = newalgo.itemsonTracker;
+    filename = newalgo.filename;
 }
 
 
 SLVO& SLVO::operator=(const SLVO& newalgo){
-    AdjMap = new AdjNode[maxdegree+1];
-    for(int i = 0; i < maxdegree+1; i++){
+    AdjMap = new AdjNode[nvertices];
+    for(int i = 0; i < nvertices; i++){
         AdjMap[i] = newalgo.AdjMap[i];
     }
     ColorOrder = newalgo.ColorOrder;
     delete[] DegreeTracker;
-    DegreeTracker = new DLList[newalgo.maxdegree+1];
-    for(int i = 0; i < maxdegree; i++){
+    DegreeTracker = new DLList[newalgo.nvertices];
+    for(int i = 0; i < nvertices-1; i++){
         DegreeTracker[i] = newalgo.DegreeTracker[i];
     }
-    maxdegree = newalgo.maxdegree;
+    nvertices = newalgo.nvertices;
+    terminalclique = newalgo.terminalclique;
+    nColorUsed = newalgo.nColorUsed;
+    itemsonTracker = newalgo.itemsonTracker;
+    filename = newalgo.filename;
     return *this;
 }
 
 
 SLVO::~SLVO(){
-    delete[] AdjMap;
     delete[] DegreeTracker;
 }
 
 
-// Time Complexity Theta(2V+E)
-void SLVO::ReadFile(const std::string& filename) {
+// Time Complexity Theta(V+E)
+void SLVO::ReadFile(const std::string& newfilename) {
+    filename = newfilename;
     ifstream inputfile(filename);                       // Open a file
     if(!inputfile){
         cout << "Error in loading file" << endl;
         exit(1);
     }
 
-    int nvertices = 0;
     inputfile >> nvertices;                 // Read the number of vertices
-    maxdegree = nvertices-1;                    // maxdegree is the maximum number degree a vertex can have
-    DegreeTracker = new DLList[maxdegree+1];     // Create an array for tracking the degree
+    DegreeTracker = new DLList[nvertices];     // Create an array for tracking the degree
     AdjMap = new AdjNode[nvertices];        // Create a dictionary of adjacent nodes
 
     int* indexdict[2];
@@ -106,7 +111,6 @@ void SLVO::ReadFile(const std::string& filename) {
         AdjMap[i].nodeonlist = newnode;         // make adjNode's pointer points to it
         DegreeTracker[AdjMap[i].degree].PushBackP(newnode);        // Add that node to the tracker.
         itemsonTracker++;
-        cumOriginalDegree += AdjMap[i].degree;
     }
 
     delete[] indexdict[0];          // Delete the start index for each node
@@ -114,38 +118,24 @@ void SLVO::ReadFile(const std::string& filename) {
 }
 
 
-// Time Complexity Theta(1)
-void SLVO::AddEdge(const int& src,const int& dest){
-    AdjMap[src].children.PushBack(dest);         // Present
-    AdjMap[src].currentdegree++;
-    AdjMap[src].degree++;
-}
-
-
-void SLVO::Coloring() {
+// Time complexity Theta(V+E)
+void SLVO::FindOrder() {
 
     int currindex = 0;
+
     while (itemsonTracker != 0){
         if(!DegreeTracker[currindex].isEmpty()){                    // Check if the current level is empty
-            int itempicked = DegreeTracker[currindex].GetHead()->data;      // Get the first number
+            if(itemsonTracker == currindex +1 && itemsonTracker > terminalclique){
+                terminalclique = itemsonTracker;                    // We got the terminal clique
+            }
 
-//            cout << "============================" << endl;
-//            for(int j = 0; j < 20; j++){
-//                cout << j << " is: " << DegreeTracker[j].GetSize() << endl;
-//                if(!DegreeTracker[j].isEmpty()){
-//                    DegreeTracker[j].PrintList();
-//                }
-//            }
-//            cout << "---------------------------\n" << endl;
+
+            int itempicked = DegreeTracker[currindex].GetHead()->data;      // Get the first number
 
             DegreeTracker[currindex].PopFront();                    // Remove the first number
             itemsonTracker--;
             AdjMap[itempicked].isdeleted = true;                    // Mark deleted
             AdjMap[itempicked].degreewhendelete = AdjMap[itempicked].currentdegree; // Get the degreewhendeleted
-
-            if(AdjMap[itempicked].degreewhendelete > maxdeletedegree){
-                maxdeletedegree = AdjMap[itempicked].degreewhendelete;
-            }
 
             AdjMap[itempicked].nodeonlist = nullptr;                // The node is no longer on the list
 
@@ -154,31 +144,56 @@ void SLVO::Coloring() {
 
             while (AdjMap[itempicked].children.iter != nullptr){
                 int child = AdjMap[itempicked].children.iter->data;
-                if(!AdjMap[child].isdeleted) {
+                if(!AdjMap[child].isdeleted) {                          // Delete that child in the current level
                     DegreeTracker[AdjMap[child].currentdegree].DeleteNode(AdjMap[child].nodeonlist);
-                    AdjMap[child].currentdegree--;
+                    AdjMap[child].currentdegree--;      // Move to next level
                     DegreeTracker[AdjMap[child].currentdegree].PushBackP(AdjMap[child].nodeonlist);
-
                 }
                 AdjMap[itempicked].children.iter = AdjMap[itempicked].children.iter->next;
             }
             if(currindex != 0) {
-                currindex--;
+                currindex--;            // Next time starts with the upper level.
             }
         }
         else{
-            currindex++;
+            currindex++;            // If empty, go to the next level.
         }
     }
 }
 
 
-void SLVO::PrintResult() {
-    cout << "Result is: ";
-    while (!ColorOrder.isEmpty()){
+// Time complexity Theta(V+E)
+void SLVO::Coloring(const bool& isPrint){
+    FindOrder();
+    int totaloriginaldegree = 0;
+    int stacksize = 0;
+    int maximumdegree_deleted = -1;
+    ofstream outputfile;
+    if(isPrint){
+        outputfile.open("out_"+filename);
+    }
+
+    while (!ColorOrder.isEmpty()){          // Pop the ordering list
         int temp = ColorOrder.Peek();
-        cout << temp << " ";
+        int newcolor = ColoraVertex(temp);      // For each popped vertex, make a color for them.
+        AdjMap[temp].color = newcolor;
+        if(isPrint) {
+            totaloriginaldegree += AdjMap[temp].degree;
+            stacksize++;
+            if(AdjMap[temp].degreewhendelete > maximumdegree_deleted){
+                maximumdegree_deleted = AdjMap[temp].degreewhendelete;
+            }
+            cout << "Coloring: " << temp << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[temp].degree << "; Degree when deleted is: " << AdjMap[temp].degreewhendelete << endl;
+            outputfile << temp << ", " << newcolor << endl;
+        }
         ColorOrder.Popback();
     }
-    cout << " " << endl;
+
+    outputfile.close();
+    cout << "\n=====================================" << endl;
+        cout << "Total number of colors used: " << nColorUsed+1 << endl;
+        cout << "The average Original degree: " << totaloriginaldegree / stacksize << endl;
+        cout << "The Maximum degree when deleted: " << maximumdegree_deleted << endl;
+        cout << "The size of terminal clique: " << terminalclique << endl;
+        cout << "=====================================" << endl;
 }

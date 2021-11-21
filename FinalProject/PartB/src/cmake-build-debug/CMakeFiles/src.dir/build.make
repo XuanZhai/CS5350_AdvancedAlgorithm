@@ -157,6 +157,84 @@ CMakeFiles/src.dir/URO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/URO.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.cpp -o CMakeFiles/src.dir/URO.cpp.s
 
+CMakeFiles/src.dir/BFSO.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/BFSO.cpp.o: ../BFSO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/src.dir/BFSO.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/BFSO.cpp.o -c /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.cpp
+
+CMakeFiles/src.dir/BFSO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/BFSO.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.cpp > CMakeFiles/src.dir/BFSO.cpp.i
+
+CMakeFiles/src.dir/BFSO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/BFSO.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.cpp -o CMakeFiles/src.dir/BFSO.cpp.s
+
+CMakeFiles/src.dir/DSQueue.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/DSQueue.cpp.o: ../DSQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/src.dir/DSQueue.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/DSQueue.cpp.o -c /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.cpp
+
+CMakeFiles/src.dir/DSQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/DSQueue.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.cpp > CMakeFiles/src.dir/DSQueue.cpp.i
+
+CMakeFiles/src.dir/DSQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/DSQueue.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.cpp -o CMakeFiles/src.dir/DSQueue.cpp.s
+
+CMakeFiles/src.dir/DFSO.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/DFSO.cpp.o: ../DFSO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/src.dir/DFSO.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/DFSO.cpp.o -c /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.cpp
+
+CMakeFiles/src.dir/DFSO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/DFSO.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.cpp > CMakeFiles/src.dir/DFSO.cpp.i
+
+CMakeFiles/src.dir/DFSO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/DFSO.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.cpp -o CMakeFiles/src.dir/DFSO.cpp.s
+
+CMakeFiles/src.dir/SOLVO.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/SOLVO.cpp.o: ../SOLVO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/src.dir/SOLVO.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/SOLVO.cpp.o -c /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.cpp
+
+CMakeFiles/src.dir/SOLVO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/SOLVO.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.cpp > CMakeFiles/src.dir/SOLVO.cpp.i
+
+CMakeFiles/src.dir/SOLVO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/SOLVO.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.cpp -o CMakeFiles/src.dir/SOLVO.cpp.s
+
+CMakeFiles/src.dir/LOLVO.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/LOLVO.cpp.o: ../LOLVO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/src.dir/LOLVO.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/LOLVO.cpp.o -c /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.cpp
+
+CMakeFiles/src.dir/LOLVO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/LOLVO.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.cpp > CMakeFiles/src.dir/LOLVO.cpp.i
+
+CMakeFiles/src.dir/LOLVO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/LOLVO.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.cpp -o CMakeFiles/src.dir/LOLVO.cpp.s
+
+CMakeFiles/src.dir/AlgoInterface.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/AlgoInterface.cpp.o: ../AlgoInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/src.dir/AlgoInterface.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/AlgoInterface.cpp.o -c /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.cpp
+
+CMakeFiles/src.dir/AlgoInterface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/AlgoInterface.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.cpp > CMakeFiles/src.dir/AlgoInterface.cpp.i
+
+CMakeFiles/src.dir/AlgoInterface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/AlgoInterface.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.cpp -o CMakeFiles/src.dir/AlgoInterface.cpp.s
+
 # Object files for target src
 src_OBJECTS = \
 "CMakeFiles/src.dir/main.cpp.o" \
@@ -165,7 +243,13 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/DSStack.cpp.o" \
 "CMakeFiles/src.dir/AdjNode.cpp.o" \
 "CMakeFiles/src.dir/SLVO.cpp.o" \
-"CMakeFiles/src.dir/URO.cpp.o"
+"CMakeFiles/src.dir/URO.cpp.o" \
+"CMakeFiles/src.dir/BFSO.cpp.o" \
+"CMakeFiles/src.dir/DSQueue.cpp.o" \
+"CMakeFiles/src.dir/DFSO.cpp.o" \
+"CMakeFiles/src.dir/SOLVO.cpp.o" \
+"CMakeFiles/src.dir/LOLVO.cpp.o" \
+"CMakeFiles/src.dir/AlgoInterface.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
@@ -177,9 +261,15 @@ src: CMakeFiles/src.dir/DSStack.cpp.o
 src: CMakeFiles/src.dir/AdjNode.cpp.o
 src: CMakeFiles/src.dir/SLVO.cpp.o
 src: CMakeFiles/src.dir/URO.cpp.o
+src: CMakeFiles/src.dir/BFSO.cpp.o
+src: CMakeFiles/src.dir/DSQueue.cpp.o
+src: CMakeFiles/src.dir/DFSO.cpp.o
+src: CMakeFiles/src.dir/SOLVO.cpp.o
+src: CMakeFiles/src.dir/LOLVO.cpp.o
+src: CMakeFiles/src.dir/AlgoInterface.cpp.o
 src: CMakeFiles/src.dir/build.make
 src: CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable src"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

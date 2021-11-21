@@ -6,6 +6,28 @@ CMakeFiles/src.dir/AdjNode.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+CMakeFiles/src.dir/AlgoInterface.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+CMakeFiles/src.dir/BFSO.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.h
+CMakeFiles/src.dir/DFSO.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
 CMakeFiles/src.dir/DLLNode.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.cpp
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
@@ -13,29 +35,56 @@ CMakeFiles/src.dir/DLList.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.cpp
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+CMakeFiles/src.dir/DSQueue.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.h
 CMakeFiles/src.dir/DSStack.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.cpp
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
+CMakeFiles/src.dir/LOLVO.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.h
 CMakeFiles/src.dir/SLVO.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.cpp
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h
-CMakeFiles/src.dir/URO.cpp.o
+CMakeFiles/src.dir/SOLVO.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
- /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.cpp
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.h
+CMakeFiles/src.dir/URO.cpp.o
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.cpp
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.h
 CMakeFiles/src.dir/main.cpp.o
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AdjNode.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/AlgoInterface.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/BFSO.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DFSO.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLLNode.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DLList.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSQueue.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/DSStack.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/LOLVO.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SLVO.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/SOLVO.h
+ /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/URO.h
  /mnt/c/VS-Code/Xuan-James-Zhai-CS5350/FinalProject/PartB/src/main.cpp
