@@ -135,9 +135,10 @@ void DFSO::Coloring(const bool& isPrint){
             DFSStack.Popback();
             int newcolor = ColoraVertex(selected);
             AdjMap[selected].color = newcolor;
+
+            totaloriginaldegree += AdjMap[selected].degree;
+            selectedsize++;
             if(isPrint) {
-                totaloriginaldegree += AdjMap[selected].degree;
-                selectedsize++;
                 cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
                 outputfile << selected << ", " << newcolor << endl;
             }
@@ -156,9 +157,11 @@ void DFSO::Coloring(const bool& isPrint){
     }
 
     outputfile.close();
-    cout << "\n=====================================" << endl;
-    cout << "Total number of colors used: " << nColorUsed+1 << endl;
-    cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
-    cout << "=====================================" << endl;
+    if(isPrint) {
+        cout << "\n=====================================" << endl;
+        cout << "Total number of colors used: " << nColorUsed + 1 << endl;
+        cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
+        cout << "=====================================" << endl;
+    }
     delete[] visited;
 }

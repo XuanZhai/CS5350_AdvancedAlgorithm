@@ -215,6 +215,45 @@ def PrintOutput(isToaFile, filename):              # isToaFile = 0 means print t
 
 
 
+def PrintGraphData():
+
+    print("Number of vertices", len(adj_list.keys()))
+
+
+
+def FindConflicts():
+    vnconflit = [0]*15
+    estable = {}
+    for i in range(100):
+        RandomGraphS(15,100)
+        for j in range(len(adj_list.keys())):
+            vnconflit[j] = vnconflit[j] + len(adj_list[j])
+
+            for a in adj_list[j]:
+                if a[0]+j in estable.keys():
+                    estable[a[0]+j] = estable[a[0]+j] + 1
+                else:
+                    estable[a[0]+j] = 1
+
+
+    for i in range(len(adj_list.keys())):
+        vnconflit[i] = vnconflit[i] / 100
+    
+    for i in estable:
+        estable[i] = estable[i] / 100
+
+    print("Number of vertices", len(adj_list.keys()))
+    print("The average number of degrees for each vertex")
+    print(vnconflit)
+    for key in sorted(estable):
+        print  (key, " and ", estable[key])
+
+
+
+
+
+
+
 def GenerateOutput():
     size = 1000
     CompleteGraph(size)
@@ -235,4 +274,4 @@ def GenerateOutput():
         PrintOutput(True,filename)
 
 
-GenerateOutput()
+FindConflicts()

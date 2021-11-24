@@ -112,25 +112,26 @@ void URO::Coloring(const bool& isPrint){
         outputfile.open("out_"+filename);
     }
 
-
     while (nverremain != 0){                // While not all been selected
         int selindex = rand()%nverremain;       // Randomly pick one that's unselected
         int selected = Verticesleft[selindex];
         Verticesleft[selindex] = Verticesleft[nverremain-1];  // Delete it in the array
         int newcolor = ColoraVertex(selected);          // Find a color for it
         AdjMap[selected].color = newcolor;
+
+        totaloriginaldegree += AdjMap[selected].degree;
+        selectedsize++;
         if(isPrint) {
-            totaloriginaldegree += AdjMap[selected].degree;
-            selectedsize++;
             cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
             outputfile << selected << ", " << newcolor << endl;
         }
         nverremain--;
     }
-
-    outputfile.close();
-    cout << "\n=====================================" << endl;
-    cout << "Total number of colors used: " << nColorUsed+1 << endl;
-    cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
-    cout << "=====================================" << endl;
+    if(isPrint) {
+        outputfile.close();
+        cout << "\n=====================================" << endl;
+        cout << "Total number of colors used: " << nColorUsed + 1 << endl;
+        cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
+        cout << "=====================================" << endl;
+    }
 }

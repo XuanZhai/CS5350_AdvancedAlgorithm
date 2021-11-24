@@ -129,7 +129,6 @@ void SLVO::FindOrder() {
                 terminalclique = itemsonTracker;                    // We got the terminal clique
             }
 
-
             int itempicked = DegreeTracker[currindex].GetHead()->data;      // Get the first number
 
             DegreeTracker[currindex].PopFront();                    // Remove the first number
@@ -177,12 +176,13 @@ void SLVO::Coloring(const bool& isPrint){
         int temp = ColorOrder.Peek();
         int newcolor = ColoraVertex(temp);      // For each popped vertex, make a color for them.
         AdjMap[temp].color = newcolor;
+
+        totaloriginaldegree += AdjMap[temp].degree;
+        stacksize++;
+        if(AdjMap[temp].degreewhendelete > maximumdegree_deleted){
+            maximumdegree_deleted = AdjMap[temp].degreewhendelete;
+        }
         if(isPrint) {
-            totaloriginaldegree += AdjMap[temp].degree;
-            stacksize++;
-            if(AdjMap[temp].degreewhendelete > maximumdegree_deleted){
-                maximumdegree_deleted = AdjMap[temp].degreewhendelete;
-            }
             cout << "Coloring: " << temp << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[temp].degree << "; Degree when deleted is: " << AdjMap[temp].degreewhendelete << endl;
             outputfile << temp << ", " << newcolor << endl;
         }
@@ -190,10 +190,12 @@ void SLVO::Coloring(const bool& isPrint){
     }
 
     outputfile.close();
-    cout << "\n=====================================" << endl;
-        cout << "Total number of colors used: " << nColorUsed+1 << endl;
+    if(isPrint) {
+        cout << "\n=====================================" << endl;
+        cout << "Total number of colors used: " << nColorUsed + 1 << endl;
         cout << "The average Original degree: " << totaloriginaldegree / stacksize << endl;
         cout << "The Maximum degree when deleted: " << maximumdegree_deleted << endl;
         cout << "The size of terminal clique: " << terminalclique << endl;
         cout << "=====================================" << endl;
+    }
 }

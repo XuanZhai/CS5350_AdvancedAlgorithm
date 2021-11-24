@@ -108,7 +108,6 @@ void BFSO::Coloring(const bool& isPrint){
     bool *visited = new bool[nvertices]{false};
     DSQueue BFSQueue;
     int loopindex = 0;
-
     int nverremain = nvertices;
     int totaloriginaldegree = 0;
     int selectedsize = 0;
@@ -116,8 +115,7 @@ void BFSO::Coloring(const bool& isPrint){
     if(isPrint){
         outputfile.open("out_"+filename);
     }
-
-    BFSQueue.Pushback(0);
+    BFSQueue.Pushback(0);       // Start the BFS algorithm
     visited[0] = true;
 
     while (nverremain != 0){
@@ -133,9 +131,10 @@ void BFSO::Coloring(const bool& isPrint){
             BFSQueue.PopFront();
             int newcolor = ColoraVertex(selected);
             AdjMap[selected].color = newcolor;
+
+            totaloriginaldegree += AdjMap[selected].degree;
+            selectedsize++;
             if(isPrint) {
-                totaloriginaldegree += AdjMap[selected].degree;
-                selectedsize++;
                 cout << "Coloring: " << selected << ". The color is " << newcolor << "; Original Degree is: " << AdjMap[selected].degree << "." << endl;
                 outputfile << selected << ", " << newcolor << endl;
             }
@@ -152,11 +151,12 @@ void BFSO::Coloring(const bool& isPrint){
 
         }
     }
-
     outputfile.close();
-    cout << "\n=====================================" << endl;
-    cout << "Total number of colors used: " << nColorUsed+1 << endl;
-    cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
-    cout << "=====================================" << endl;
+    if(isPrint) {
+        cout << "\n=====================================" << endl;
+        cout << "Total number of colors used: " << nColorUsed + 1 << endl;
+        cout << "The average Original degree: " << totaloriginaldegree / selectedsize << endl;
+        cout << "=====================================" << endl;
+    }
     delete[] visited;
 }

@@ -110,23 +110,23 @@ void LOLVO::ReadFile(const std::string& newfilename) {
 
 
 void LOLVO::Coloring(const bool& isPrint){      // Same algorithm as what in SOLVO, only loop through the table
-    int totaloriginaldegree = 0;                // From top to bottom instead of from bottom to top
-    int stacksize = 0;
-    int trackerlevel = nvertices-1;             // Here it starts at the maxdegree and goes to.
+    int totaloriginaldegree = 0;
+    int stacksize = 0;                  // It's the number of colored vertices
+    int trackerlevel =0;                // It's the level in the degree table
     ofstream outputfile;
     if(isPrint){
         outputfile.open("out_"+filename);
     }
 
-    while (stacksize != nvertices){
+    while (stacksize != nvertices){         // Loop through each node on the degree table
         if(DegreeTracker[trackerlevel].isEmpty()){
-            trackerlevel--;
+            trackerlevel++;                 // If at that level there's no vertex, go to the next level
         }
         else{
-            DLLNode* temp = DegreeTracker[trackerlevel].GetHead();
+            DLLNode* temp = DegreeTracker[trackerlevel].GetHead();      // Loop through that level
             while (temp != nullptr){
-                int selected = temp->data;
-                int newcolor = ColoraVertex(selected);
+                int selected = temp->data;                      // Get a vertex
+                int newcolor = ColoraVertex(selected);          // Find a color for it
                 AdjMap[selected].color = newcolor;
                 if(isPrint) {
                     totaloriginaldegree += AdjMap[selected].degree;
@@ -136,14 +136,14 @@ void LOLVO::Coloring(const bool& isPrint){      // Same algorithm as what in SOL
                 stacksize++;
                 temp = temp->next;
             }
-            trackerlevel--;
+            trackerlevel++;
         }
     }
-
-
-    outputfile.close();
-    cout << "\n=====================================" << endl;
-    cout << "Total number of colors used: " << nColorUsed+1 << endl;
-    cout << "The average Original degree: " << totaloriginaldegree / stacksize << endl;
-    cout << "=====================================" << endl;
+    if(isPrint) {
+        outputfile.close();
+        cout << "\n=====================================" << endl;
+        cout << "Total number of colors used: " << nColorUsed + 1 << endl;
+        cout << "The average Original degree: " << totaloriginaldegree / stacksize << endl;
+        cout << "=====================================" << endl;
+    }
 }

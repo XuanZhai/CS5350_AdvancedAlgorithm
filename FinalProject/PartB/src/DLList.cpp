@@ -134,6 +134,10 @@ void DLList::PushFrontP(DLLNode *newnode) {
 
 
 void DLList::PopFront(){
+    if(size == 1){
+        int b =0;
+    }
+
     if(head == nullptr){
         return;
     }
@@ -145,6 +149,7 @@ void DLList::PopFront(){
     }
     else{
         head = head->next;
+        iter = head->next;
         delete head->prev;
         head->prev = nullptr;
     }
@@ -188,12 +193,18 @@ void DLList::DecreSize() {
 
 
 void DLList::DeleteNode(DLLNode*& oldnode){
-    if(oldnode->prev != nullptr && oldnode->next != nullptr) {
+    if(oldnode->prev != nullptr && oldnode->next != nullptr) {      // It means it's in the middle
         oldnode->prev->next = oldnode->next;
         oldnode->next->prev = oldnode->prev;
     }
+    else if(oldnode->prev == nullptr && oldnode->next == nullptr){
+        head = nullptr;
+        tail = nullptr;
+        iter = nullptr;
+    }
     else if(oldnode->next != nullptr){              // Means it's the head
         head = oldnode->next;
+        iter = oldnode->next;
         oldnode->next->prev = nullptr;
     }
     else if(oldnode->prev != nullptr){                       // Means it's the tail
